@@ -1,41 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Respostas enviadas!</title>
+    <meta charset="UTF-8">
+    <title>Quiz da Doutora</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #6b8cff, #88e1f2);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            background: #f5f5f5;
+        }
 
-    .box {
-      background: rgba(255,255,255,0.15);
-      padding: 40px;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
-      animation: fadeIn 1s ease;
-    }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+        .pergunta {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
 
+        label {
+            display: block;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        section {
+            margin-top: 40px;
+        }
+
+        section h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .pergunta-faq {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .pergunta-faq label {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>Respostas enviadas com sucesso! 🎉</h1>
-    <p>Obrigado por preencher o quiz.</p>
-  </div>
+
+    <h2>Quiz — Procedimentos da Doutora</h2>
+    <div id="quiz-container"></div>
+
+    <button id="enviar">Enviar Respostas</button>
+
+    <!-- SEÇÕES INFORMATIVAS -->
+    <section id="profissional">
+        <h2>Informações sobre a Profissional</h2>
+        <ul>
+            <li><strong>Nome:</strong> Dra. Dani Rafaela</li>
+            <li><strong>Formação:</strong></li>
+            <li><strong>Especializações:</strong></li>
+            <li><strong>Anos de experiência:</strong></li>
+        </ul>
+    </section>
+
+    <section id="clinicas">
+        <h2>Dados das Clínicas/Consultórios</h2>
+        <ul>
+            <li><strong>Endereço:</strong></li>
+            <li><strong>Horário de funcionamento:</strong></li>
+            <li><strong>Dias de funcionamento:</strong></li>
+            <li><strong>Dias de atendimento em Prudente:</strong></li>
+            <li><strong>Dias de atendimento em Dracena:</strong></li>
+            <li><strong>Forma de agendamento:</strong></li>
+            <li><strong>Políticas de cancelamento:</strong></li>
+            <li><strong>Formas de pagamento:</strong></li>
+            <li><strong>Políticas de agendamento:</strong></li>
+            <li><strong>Políticas de avaliação:</strong></li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
