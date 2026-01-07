@@ -9,6 +9,21 @@ const perguntas = [
     "A dra realiza lipo enzimática de papada?",
     "A dra realiza fios de PDO?",
     "A dra realiza microagulhamento / tratamentos de pele?"
+    "O preenchimento dura quanto tempo?"
+    "Após o Botox, em quanto tempo vejo o resultado?"
+    "Quantas sessões são necessárias para Bioestimuladores?
+    "A doutora realiza tratamentos para olheiras?"
+    "A doutora realiza peeling químico?"
+    "A doutora oferece acompanhamento após os procedimentos?"
+    "Estou amamentando: posso fazer procedimentos?"
+    "A avaliação tem custo?"
+    "A doutora faz planejamento facial completo?"
+    "Faz parcelamento?"
+    "Qual o tempo médio de duração dos procedimentos?"
+    "O preenchimento pode ser revertido caso eu não goste?"
+    "Grávidas podem fazer?"
+    "Quem tem doenças autoimunes pode realizar procedimentos?"
+    "Quem tem alergia pode fazer preenchimento?"
 ];
 
 const quizContainer = document.getElementById("quiz-container");
