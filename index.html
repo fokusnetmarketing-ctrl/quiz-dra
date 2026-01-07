@@ -85,32 +85,69 @@
 
     <button id="enviar">Enviar Respostas</button>
 
-    <!-- SEÇÕES INFORMATIVAS -->
-    <section id="profissional">
-        <h2>Informações sobre a Profissional</h2>
-        <ul>
-            <li><strong>Nome:</strong> Dra. Dani Rafaela</li>
-            <li><strong>Formação:</strong></li>
-            <li><strong>Especializações:</strong></li>
-            <li><strong>Anos de experiência:</strong></li>
-        </ul>
-    </section>
+ <section id="profissional">
+    <h2>Informações sobre a Profissional</h2>
+    <div class="pergunta">
+        <label>Nome:</label>
+        <input type="text" name="prof_nome" placeholder="Digite seu nome">
+    </div>
+    <div class="pergunta">
+        <label>Formação:</label>
+        <input type="text" name="prof_formacao" placeholder="Digite sua formação">
+    </div>
+    <div class="pergunta">
+        <label>Especializações:</label>
+        <input type="text" name="prof_especializacoes" placeholder="Digite suas especializações">
+    </div>
+    <div class="pergunta">
+        <label>Anos de experiência:</label>
+        <input type="number" name="prof_anos" placeholder="Digite os anos de experiência">
+    </div>
+</section>
 
-    <section id="clinicas">
-        <h2>Dados das Clínicas/Consultórios</h2>
-        <ul>
-            <li><strong>Endereço:</strong></li>
-            <li><strong>Horário de funcionamento:</strong></li>
-            <li><strong>Dias de funcionamento:</strong></li>
-            <li><strong>Dias de atendimento em Prudente:</strong></li>
-            <li><strong>Dias de atendimento em Dracena:</strong></li>
-            <li><strong>Forma de agendamento:</strong></li>
-            <li><strong>Políticas de cancelamento:</strong></li>
-            <li><strong>Formas de pagamento:</strong></li>
-            <li><strong>Políticas de agendamento:</strong></li>
-            <li><strong>Políticas de avaliação:</strong></li>
-        </ul>
-    </section>
+<section id="clinicas">
+    <h2>Dados das Clínicas/Consultórios</h2>
+    <div class="pergunta">
+        <label>Endereço:</label>
+        <input type="text" name="clin_endereco" placeholder="Digite o endereço">
+    </div>
+    <div class="pergunta">
+        <label>Horário de funcionamento:</label>
+        <input type="text" name="clin_horario" placeholder="Digite o horário">
+    </div>
+    <div class="pergunta">
+        <label>Dias de funcionamento:</label>
+        <input type="text" name="clin_dias" placeholder="Digite os dias de funcionamento">
+    </div>
+    <div class="pergunta">
+        <label>Dias de atendimento em Prudente:</label>
+        <input type="text" name="clin_prudente" placeholder="Digite os dias">
+    </div>
+    <div class="pergunta">
+        <label>Dias de atendimento em Dracena:</label>
+        <input type="text" name="clin_dracena" placeholder="Digite os dias">
+    </div>
+    <div class="pergunta">
+        <label>Forma de agendamento:</label>
+        <input type="text" name="clin_agendamento" placeholder="Ex: WhatsApp / Telefone">
+    </div>
+    <div class="pergunta">
+        <label>Políticas de cancelamento:</label>
+        <input type="text" name="clin_cancelamento" placeholder="Digite as políticas">
+    </div>
+    <div class="pergunta">
+        <label>Formas de pagamento:</label>
+        <input type="text" name="clin_pagamento" placeholder="Ex: Cartão, Pix, Dinheiro">
+    </div>
+    <div class="pergunta">
+        <label>Políticas de agendamento:</label>
+        <input type="text" name="clin_politicas_agendamento" placeholder="Digite as políticas">
+    </div>
+    <div class="pergunta">
+        <label>Políticas de avaliação:</label>
+        <input type="text" name="clin_politicas_avaliacao" placeholder="Digite as políticas">
+    </div>
+</section>
 
     <script src="script.js"></script>
 </body>
