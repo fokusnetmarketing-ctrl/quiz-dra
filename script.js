@@ -97,3 +97,30 @@ function enviarParaPlanilha(respostas) {
         window.location.href = "confirmacao.html";
     });
 }
+// Capturando dados da profissional
+const dadosProfissional = {
+    "Nome": document.querySelector('input[name="prof_nome"]').value || "SEM RESPOSTA",
+    "Formação": document.querySelector('input[name="prof_formacao"]').value || "SEM RESPOSTA",
+    "Especializações": document.querySelector('input[name="prof_especializacoes"]').value || "SEM RESPOSTA",
+    "Anos de experiência": document.querySelector('input[name="prof_anos"]').value || "SEM RESPOSTA"
+};
+
+// Capturando dados das clínicas
+const dadosClinicas = {
+    "Endereço": document.querySelector('input[name="clin_endereco"]').value || "SEM RESPOSTA",
+    "Horário de funcionamento": document.querySelector('input[name="clin_horario"]').value || "SEM RESPOSTA",
+    "Dias de funcionamento": document.querySelector('input[name="clin_dias"]').value || "SEM RESPOSTA",
+    "Dias de atendimento em Prudente": document.querySelector('input[name="clin_prudente"]').value || "SEM RESPOSTA",
+    "Dias de atendimento em Dracena": document.querySelector('input[name="clin_dracena"]').value || "SEM RESPOSTA",
+    "Forma de agendamento": document.querySelector('input[name="clin_agendamento"]').value || "SEM RESPOSTA",
+    "Políticas de cancelamento": document.querySelector('input[name="clin_cancelamento"]').value || "SEM RESPOSTA",
+    "Formas de pagamento": document.querySelector('input[name="clin_pagamento"]').value || "SEM RESPOSTA",
+    "Políticas de agendamento": document.querySelector('input[name="clin_politicas_agendamento"]').value || "SEM RESPOSTA",
+    "Políticas de avaliação": document.querySelector('input[name="clin_politicas_avaliacao"]').value || "SEM RESPOSTA"
+};
+
+// Juntando tudo com as respostas do quiz
+const todasRespostas = { ...respostas, ...dadosProfissional, ...dadosClinicas };
+
+// Enviar para a planilha
+enviarParaPlanilha(todasRespostas);
