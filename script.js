@@ -1,4 +1,5 @@
 const perguntas = [
+    // Quiz original
     "A dra realiza avaliação antes dos procedimentos?",
     "A dra realiza Harmonização Facial completa?",
     "A dra utiliza apenas produtos originais e aprovados pela Anvisa?",
@@ -23,7 +24,15 @@ const perguntas = [
     "O preenchimento pode ser revertido caso eu não goste?",
     "Grávidas podem fazer?",
     "Quem tem doenças autoimunes pode realizar procedimentos?",
-    "Quem tem alergia pode fazer preenchimento?"
+    "Quem tem alergia pode fazer preenchimento?",
+
+    // Novas perguntas FAQ
+    "Dói?",
+    "Quanto tempo dura?",
+    "Quando posso treinar?",
+    "Quando vejo o resultado final?",
+    "Posso tomar bebida alcoólica?",
+    "Posso viajar depois?"
 ];
 
 const quizContainer = document.getElementById("quiz-container");
@@ -62,16 +71,13 @@ function criarRadio(numPergunta, valor) {
 }
 
 document.getElementById("enviar").addEventListener("click", () => {
-    
     const respostas = {};
 
     perguntas.forEach((pergunta, index) => {
         const selecionada = document.querySelector(
             `input[name="pergunta_${index}"]:checked`
         );
-
         const valor = selecionada ? selecionada.value : "SEM RESPOSTA";
-
         respostas[pergunta] = valor;
     });
 
@@ -84,9 +90,7 @@ function enviarParaPlanilha(respostas) {
     fetch(url, {
         method: "POST",
         mode: "no-cors",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(respostas)
     })
     .then(() => {
