@@ -24,15 +24,7 @@ const perguntas = [
     "O preenchimento pode ser revertido caso eu não goste?",
     "Grávidas podem fazer?",
     "Quem tem doenças autoimunes pode realizar procedimentos?",
-    "Quem tem alergia pode fazer preenchimento?",
-
-    // Novas perguntas FAQ
-    "Dói?",
-    "Quanto tempo dura?",
-    "Quando posso treinar?",
-    "Quando vejo o resultado final?",
-    "Posso tomar bebida alcoólica?",
-    "Posso viajar depois?"
+    "Quem tem alergia pode fazer preenchimento?"
 ];
 
 const quizContainer = document.getElementById("quiz-container");
@@ -82,6 +74,16 @@ document.getElementById("enviar").addEventListener("click", () => {
         respostas[pergunta] = selecionada ? selecionada.value : "SEM RESPOSTA";
     });
 
+    // Captura respostas das novas perguntas FAQ
+    const respostasFAQ = {
+        "Dói?": document.querySelector('input[name="faq_doi"]').value || "SEM RESPOSTA",
+        "Quanto tempo dura?": document.querySelector('input[name="faq_duracao"]').value || "SEM RESPOSTA",
+        "Quando posso treinar?": document.querySelector('input[name="faq_treino"]').value || "SEM RESPOSTA",
+        "Quando vejo o resultado final?": document.querySelector('input[name="faq_resultado"]').value || "SEM RESPOSTA",
+        "Posso tomar bebida alcoólica?": document.querySelector('input[name="faq_bebida"]').value || "SEM RESPOSTA",
+        "Posso viajar depois?": document.querySelector('input[name="faq_viagem"]').value || "SEM RESPOSTA"
+    };
+
     // Captura dados da profissional
     const dadosProfissional = {
         "Nome": document.querySelector('input[name="prof_nome"]').value || "SEM RESPOSTA",
@@ -104,10 +106,10 @@ document.getElementById("enviar").addEventListener("click", () => {
         "Políticas de avaliação": document.querySelector('input[name="clin_politicas_avaliacao"]').value || "SEM RESPOSTA"
     };
 
-    // Junta tudo
-    const todasRespostas = { ...respostas, ...dadosProfissional, ...dadosClinicas };
+    // Junta todas as respostas
+    const todasRespostas = { ...respostas, ...respostasFAQ, ...dadosProfissional, ...dadosClinicas };
 
-    // Envia
+    // Envia tudo para a planilha
     enviarParaPlanilha(todasRespostas);
 });
 
