@@ -79,7 +79,7 @@ document.getElementById("enviar").addEventListener("click", () => {
 });
 
 function enviarParaPlanilha(respostas) {
-    const url = "URL_DO_APPS_SCRIPT";
+    const url = "https://script.google.com/macros/s/AKfycbwllg4t66a-HRMLUQOtvTU-sNbgMJwTI-zmzJ80nzp5IPPVrr7GiHnVvz92ro6AYp3flw/exec";
 
     fetch(url, {
         method: "POST",
